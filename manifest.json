@@ -1,0 +1,22 @@
+{
+    "manifest_version": 3,
+    "name": "Pitch Accent Changer",
+    "version": "1.0",
+    "description": "Changes word colors based on pitch accent.",
+    "content_scripts": [
+      {
+        "matches": ["http://*/*", "https://*/*"],
+        "js": ["content.js","wanakana/wanakana.min.js"]
+      }
+    ],
+    "web_accessible_resources": [
+        {
+          "resources": [
+        "accents.json",
+        "wanakana/wanakana_min.js"
+        ],
+          "matches": ["<all_urls>"]
+        }
+      ]
+      
+  }
